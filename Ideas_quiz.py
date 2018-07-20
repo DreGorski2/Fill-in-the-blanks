@@ -7,6 +7,7 @@ fantasy = '''When Harry goes to diagon alley Hagrid buys him a ___1___ named Hed
 the form of a ___2___ in the Prisoner of Azkaban.___3___ are refered to as people who do not posses any magical powers. 
 The last horcrux that needs to be destroyed to defeat Lord Voldemort is ___4___.'''
 
+space = '''___1___ is mostly commonly referred to as the the third rock from the sun. The ____2____ is the responsible
 for the tidal shifts on the Earths surface, and without it a day would only last about 6-to-8 hours. In 4 billion years
 our galaxy the Milky Way, will collide with our neighboring galaxy, ___3___.Scientist predict that the footprint left by
 the astronauts on the ___4___ mission will be there for 100 million years '''
