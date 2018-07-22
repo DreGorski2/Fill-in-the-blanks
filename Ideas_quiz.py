@@ -13,9 +13,9 @@ our galaxy the Milky Way, will collide with our neighboring galaxy, ___3___.Scie
 the astronauts on the ___4___ mission will be there for 100 million years '''
 
 blanks = ['___1___', '___2___', '___3___', '___4___']
-answer_key_1 = ["Mickey", "Minnie", "Walt", "Dwarfs"]
-answer_key_2 = ["owl", "stag", "muggles", "Harry"]
-answer_key_3 = ["Earth", "Moon", "Andromeda", "Apollo"]
+answer_key_disney = ["Mickey", "Minnie", "Walt", "Dwarfs"]
+answer_key_magic = ["owl", "stag", "muggles", "Harry"]
+answer_key_space = ["Earth", "Moon", "Andromeda", "Apollo"]
 
 
 # def user_input(counter):
@@ -24,6 +24,8 @@ answer_key_3 = ["Earth", "Moon", "Andromeda", "Apollo"]
 
 
 def user_input(counter):
+# input: Takes in user input for the answer to the blank 
+# output: returns the user input 
     user_input = input("\nType your answer for {}:(make sure to capitalize!)\n".format(counter))
     return user_input
 
@@ -33,6 +35,8 @@ def user_input(counter):
 
 
 def attempt_selector():
+# input: Takes in user input for how many attempts they would like
+# output: returns the user input for amount of attempts as an integer.
     attempts = int(input('\nEnter the amount of attempts you want to give yourself: \n'))
     return attempts
 
@@ -42,7 +46,10 @@ def attempt_selector():
 # with the while loop and ask you to type a valid level. We pick up the returned values in the function to iterated
 # through.
 
+
 def paragraph_selector():
+#input: takes in user input on difficulty level, 
+#output: returns the paragraph selected as well as the answer key
     level = ''
     levels = ['easy', 'medium', 'hard']
     print('Levels: easy | medium | hard')
@@ -50,15 +57,15 @@ def paragraph_selector():
         level = input("\nType difficulty level: \n")
         if level == 'easy':
             print("\nYou must be an imagineer.\n")
-            return disney, answer_key_1
+            return disney, answer_key_disney
 
         if level == 'medium':
             print("\nOh so you fancy yourself a wizard ehh?\n")
-            return fantasy, answer_key_2
+            return fantasy, answer_key_magic
 
         if level == 'hard':
             print("\nPrepare for blastoff!\n")
-            return space, answer_key_3
+            return space, answer_key_space
 
 
 # def word_in_blanks()
@@ -85,6 +92,9 @@ def paragraph_selector():
 
 
 def word_in_blanks():
+#inputs: takes in # of attempts, the level selection, , and the user answer for the blanks
+#outputs:answer matached aginst answer key, corret vs incorrect string, the pararaph with correct answers so far if any,
+#the paragrpah with all correct answers, break if attempts == 0
     counter = 0
     selected_level, answer = paragraph_selector()
     attempt = attempt_selector()
